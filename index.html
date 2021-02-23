@@ -21,6 +21,28 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
+    <header class="jumbotron">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p id="currentDay" class="lead"></p>
+    </header>
+    <div class="container">
+      <!-- Timeblocks go here -->
+      <div class="time-block row g-0">
+        <div class="col-1 hour text-center">
+          <p>12PM</p>
+        </div>
+        <div class="col-10">
+          <textarea class="present description"></textarea>
+        </div>
+        <div class="col-1">
+          <button class="saveBtn">
+            <i class="fas fa-lock"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
     <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
