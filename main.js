@@ -47,7 +47,6 @@ function displayTasks() {
 
 // A simple init function to call on page ready
 function init() {
-  // localStorage.setItem("savedTasks", JSON.stringify(storedTasks));
   checkTime();
   displayTasks();
   saveTask();
