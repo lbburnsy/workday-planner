@@ -16,7 +16,7 @@ body {
 }
 
 .time-block {
-    height: 5rem;
+  height: 5rem;
 }
 
 .hour {
@@ -28,19 +28,19 @@ body {
 }
 
 textarea {
-    background: transparent;
-    border: none;
-    resize: none;
-    color: #000000;
-    border-top: 1px solid black;
-    border-left: 1px solid black;
-    height: 100%;
-    width: 100%;
-    font-size: 1.25rem;
+  background: transparent;
+  border: none;
+  resize: none;
+  color: #000000;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  height: 100%;
+  width: 100%;
+  font-size: 1.25rem;
 }
 
 .description {
-    white-space: pre-wrap;
+  white-space: pre-wrap;
 }
 
 .saveBtn {
