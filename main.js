@@ -1,6 +1,7 @@
 // General DOM queries
 const saveBtn = $(".saveBtn");
 const textarea = $(".description");
+const clearBtn = $("#clear-button")
 
 // Initializes tasks array for storage
 let storedTasks = [];
@@ -45,11 +46,20 @@ function displayTasks() {
   }
 }
 
+function clearCalendar() {
+    clearBtn.on("click", () => {
+        storedTasks = [];
+        localStorage.setItem("savedTasks", JSON.stringify(storedTasks));
+        displayTasks();
+    })
+}
+
 // A simple init function to call on page ready
 function init() {
   checkTime();
   displayTasks();
   saveTask();
+  clearCalendar();
 }
 
 $(document).ready(init());
