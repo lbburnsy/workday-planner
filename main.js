@@ -46,6 +46,7 @@ function displayTasks() {
   }
 }
 
+// Function that clears the calendar on a button click
 function clearCalendar() {
     clearBtn.on("click", () => {
         storedTasks = [];
@@ -54,9 +55,16 @@ function clearCalendar() {
     })
 }
 
+function checkStorage() {
+  if (localStorage.getItem("savedTasks") === null) {
+    localStorage.setItem("savedTasks", JSON.stringify(storedTasks));
+  }
+}
+
 // A simple init function to call on page ready
 function init() {
   checkTime();
+  checkStorage();
   displayTasks();
   saveTask();
   clearCalendar();
