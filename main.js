@@ -1,11 +1,22 @@
 const saveBtn = $(".saveBtn");
+const textarea = $(".description");
 
-saveBtn.on("click", function() {
-    if (this.getAttribute("locked") === "true") {
-        saveBtn.html("<i class='fas fa-lock-open'></i>");
-        saveBtn.attr("locked", "false");
-    } else {
-        saveBtn.html("<i class='fas fa-lock'></i>");
-        saveBtn.attr("locked", "true");
+let hour = moment().format("HH");
+console.log(hour);
+
+
+// Checks time based on moment, and applies appropriate class styling to the textarea
+function checkTime() {
+    for (let i = 0; i < textarea.length; i++) {
+        console.log(textarea[i])
+        if (textarea[i].getAttribute("value") > hour) {
+            textarea[i].classList.add("future");
+        } else if (textarea[i].getAttribute("value") < hour) {
+            textarea[i].classList.add("past")
+        } else {
+            textarea[i].classList.add("present");
+        }
     }
-})
+}
+
+$(document).ready(checkTime());
