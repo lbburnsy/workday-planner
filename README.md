@@ -12,4 +12,4 @@ Simply type in the text area and hit the save button to insert tasks into your p
 
 A gray block indicates hours past, green is hours to come, and red is the current hour you are working in.
 
-![planner gif](planner.gif)
+![planner gif](./images/planner.gif)
